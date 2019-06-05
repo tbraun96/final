@@ -65,12 +65,13 @@
         <video id="myVideo" src = "assets/view01.mp4" autoplay muted>
             <script>
                 var myvid = document.getElementById('myVideo');
+
                 var myvids = [
                     "assets/view01.mp4",
                     "assets/view02.mp4"
                 ];
                 var activeVideo = 0;
-
+                myvid.playbackRate = 1.5;
                 myvid.addEventListener('ended', function(e) {
                     // update the new active video index
                     activeVideo = (++activeVideo) % myvids.length;

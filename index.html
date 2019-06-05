@@ -319,24 +319,25 @@
         [44.636938, -123.292659]
     ];
 
-    var bounds = L.latLngBounds(maxBounds);
+    //var bounds = L.latLngBounds(maxBounds);
 
     //Map2
 
     var map2 = L.map("mymap2", {
         zoomControl: true,
         scrollWheelZoom: true
-    }).setMaxBounds(maxBounds);
+    }).setView([44.636940, -123.292661], 13);
 
 
-    map2.fitBounds(bounds);
+    //map2.fitBounds(bounds);
 
     //d3.select("#mymap2").data(data1);
 
 
     // add a basemap for the second map
-    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}@2x.png', {
-        maxZoom: 19
+    L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+        maxZoom: 20,
+        subdomains:['mt0','mt1','mt2','mt3']
     }).addTo(map2);
 
 

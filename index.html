@@ -258,21 +258,6 @@
 
     </section>
 
-    <!-- the first chart -->
-    <section class="bg-apple">
-        <div id="mychart1">
-
-            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999;" class="wrap aligncenter">
-                <h1>
-                    <strong>115 Years of Oregon Climate Data</strong>
-                </h1>
-            </div>
-
-            <div id="chart1"></div>
-        </div>
-    </section>
-
-
     <!-- the second map -->
     <section class="bg-apple">
 
@@ -286,20 +271,6 @@
         <img src="img/tpb1.png" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;">
     </section>
 
-    <!-- the second chart -->
-    <section class="bg-apple">
-        <div id="mychart2">
-
-            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999;" class="wrap aligncenter">
-                <h1>
-                    <strong>115 Years of Florida Climate Data</strong>
-                </h1>
-            </div>
-
-            <div id="chart2"></div>
-
-        </div>
-    </section>
 
     <section class="slide-top bg-trans-dark" style="font-family: 'Playfair Display', serif;">
 
@@ -396,76 +367,7 @@
                  location.href = newUrl;
                  location.reload(true);
              }
-         } else if (crtDiv.attr("id") === "mychart1") {
-
-            var chart = c3.generate({
-                bindto: '#chart1',
-                data: {
-                    url: 'https://tbraun96.github.io/lab3/assets/oregon.csv',
-                    x: 'date',
-                    xFormat: '%Y',
-                    type: 'spline',
-                },
-
-                axis: {
-                    x: {
-                        type: 'timeseries',
-                        tick: {
-                            format: '%Y'
-                        },
-                        label: {
-                            text: 'Time (year)',
-                            position: 'outer-middle'
-                        }
-                    },
-
-                    y: {
-                        label: {
-                            text: 'Centigrade',
-                            position: 'out-center'
-                        }
-                    }
-
-                }
-            });
-
-        } else if (crtDiv.attr("id") == "mychart2") {
-
-            var chart = c3.generate({
-                bindto: '#chart2',
-                data: {
-                    url: 'https://tbraun96.github.io/lab3/assets/Florida.csv',
-                    x: 'date',
-                    xFormat: '%Y',
-                    type: 'spline',
-                    columns: [
-                        ['AverageTemperature', -10, 0, 10, 100]
-                    ]
-                },
-
-                axis: {
-                    x: {
-                        type: 'timeseries',
-                        tick: {
-                            format: '%Y'
-                        },
-                        label: {
-                            text: 'Time (year)',
-                            position: 'outer-middle'
-                        }
-                    },
-
-                    y: {
-                        label: {
-                            text: 'Centigrade',
-                            position: 'out-center'
-                        }
-                    }
-
-                }
-            });
-
-        }
+         }
 
     });
 </script>

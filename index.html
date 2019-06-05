@@ -262,13 +262,17 @@
     <section class="bg-apple">
 
         <div id="mymap2">
-            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999; color: red;" class="wrap aligncenter">
+            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999; color: green;" class="wrap aligncenter">
                 <h1>
-                    <strong>The Red-Zone: The Southeast USA</strong>
+                    <strong>Information of The Point Cloud and The Region</strong>
                 </h1>
             </div>
         </div>
-        <img src="img/tpb1.png" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;">
+        <div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;">
+
+            TODO: Brian; insert text here
+
+        </div>
     </section>
 
 
@@ -309,9 +313,10 @@
     var ws = new WebSlides();
 
 
+    //44.636940, -123.292661
     var maxBounds = [
-        [5.499550, -167.276413],
-        [83.162102, -52.233040]
+        [44.636940, -123.292661],
+        [44.636938, -123.292659]
     ];
 
     var bounds = L.latLngBounds(maxBounds);
@@ -319,8 +324,8 @@
     //Map2
 
     var map2 = L.map("mymap2", {
-        zoomControl: false,
-        scrollWheelZoom: false
+        zoomControl: true,
+        scrollWheelZoom: true
     }).setMaxBounds(maxBounds);
 
 
@@ -352,7 +357,7 @@
             // Checks if the map container size changed and updates the map if so
             map2.invalidateSize();
             //Fly to a new location.
-            map2.flyTo([29.0902, -85.7129], 7, {
+            map2.flyTo([44.636940, -123.292661], 12, {
                 animate: true,
                 duration: 4
             });

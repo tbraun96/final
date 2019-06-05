@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Geovisual Analytics| LIDAR Exploration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="please add">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <!-- Javascript Library -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/webslides.min.js"></script>
+    <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="build/potree/potree.css">
+    <link rel="stylesheet" type="text/css" href="libs/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="libs/openlayers3/ol.css">
+    <link rel="stylesheet" type="text/css" href="libs/spectrum/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="libs/jstree/themes/mixed/style.css">
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.57/Build/Cesium/Widgets/widgets.css"></head>
+
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<script src="libs/jquery/jquery-3.1.1.min.js"></script>
+<script src="libs/spectrum/spectrum.js"></script>
+<script src="libs/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="libs/three.js/build/three.min.js"></script>
+<script src="libs/other/BinaryHeap.js"></script>
+<script src="libs/tween/tween.min.js"></script>
+<script src="libs/d3/d3.js"></script>
+<script src="libs/proj4/proj4.js"></script>
+<script src="libs/openlayers3/ol.js"></script>
+<script src="libs/i18next/i18next.js"></script>
+<script src="libs/jstree/jstree.js"></script>
+<script src="build/potree/potree.js"></script>
+<script src="libs/plasio/js/laslaz.js"></script>
+<script src="https://cesiumjs.org/releases/1.57/Build/Cesium/Cesium.js"></script>
+
+<article id="webslides">
+    <!-- the landing scene -->
+    <section class="bg-black">
+        <video id="myVideo" src = "assets/view01.mp4" autoplay muted>
+            <script>
+                var myvid = document.getElementById('myVideo');
+                var myvids = [
+                    "assets/view01.mp4",
+                    "assets/view02.mp4"
+                ];
+                var activeVideo = 0;
+
+                myvid.addEventListener('ended', function(e) {
+                    // update the new active video index
+                    activeVideo = (++activeVideo) % myvids.length;
+
+                    // update the video source and play
+                    myvid.src = myvids[activeVideo];
+                    myvid.play();
+                });
+            </script>
+        </video>
+        <div style="font-family: 'Playfair Display', serif;" class="wrap aligncenter">
+            <h1>
+                <strong>Corvallis Forest Area</strong>
+            </h1>
+        </div>
+
+        <div class="flexblock">
+            <h3>
+                <strong>By Katharine Nicolato, Brian Begay, and Thomas Braun</strong>
+            </h3>
+        </div>
+    </section>
+    <!-- the first map -->
+    <section class="bg-apple">
+
+        <div class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
+
+            <div id="potree_render_area">
+                <div id="cesiumContainer" style="position: absolute; width: 100%; height: 100%; background-color:transparent"></div>
+            </div>
+            <div id="potree_sidebar_container"> </div>
+        </div>
+
+        <script>
+            window.cesiumViewer = new Cesium.Viewer('cesiumContainer', {
+                useDefaultRenderLoop: false,
+                animation: false,
+                vrButton: false,
+                baseLayerPicker : false,
+                fullscreenButton: false,
+                terrainProvider : Cesium.createWorldTerrain(),
+                geocoder: false,
+                homeButton: false,
+                infoBox: false,
+                sceneModePicker: false,
+                selectionIndicator: false,
+                timeline: false,
+                navigationHelpButton: false,
+                terrainShadows: Cesium.ShadowMode.DISABLED,
+            });
+
+            let cp = new Cesium.Cartesian3(4303414.154026048, 552161.235598733, 4660771.704035539);
+            cesiumViewer.camera.setView({
+                destination : cp,
+                orientation: {
+                    heading : 10,
+                    pitch : -Cesium.Math.PI_OVER_TWO * 0.5,
+                    roll : 0.0
+                }
+            });
+
+            window.potreeViewer = new Potree.Viewer(document.getElementById("potree_render_area"), {
+                useDefaultRenderLoop: false
+            });
+            potreeViewer.setEDLEnabled(true);
+            potreeViewer.setFOV(60);
+            potreeViewer.setPointBudget(1000*1000);
+            potreeViewer.setMinNodeSize(0);
+            potreeViewer.loadSettingsFromURL();
+            potreeViewer.setBackground(null);
+
+            potreeViewer.loadGUI(() => {
+                potreeViewer.setLanguage('en');
+                $("#menu_appearance").next().show();
+                //viewer.toggleSidebar();
+            });
+
+            Potree.loadPointCloud("pointclouds/saddleback/cloud.js", "sigeom.sa", e => {
+                potreeViewer.scene.addPointCloud(e.pointcloud);
+                e.pointcloud.position.z = 170;
+                let material = e.pointcloud.material;
+                material.pointColorType = Potree.PointColorType.ELEVATION; // any Potree.PointColorType.XXXX
+                material.pointSizeType = Potree.PointSizeType.ATTENUATED;
+                material.shape = Potree.PointShape.CIRCLE;
+                material.elevationRange =[170,350]
+
+                potreeViewer.scene.view.position.set(476828.47,  4943195.899999999, 2067.402);
+                potreeViewer.scene.view.lookAt(new THREE.Vector3(476828.47,  4942195.899999999, -0.707));
+
+                Potree.measureTimings = true;
+
+
+                let pointcloudProjection = e.pointcloud.projection;
+                let mapProjection = proj4.defs("WGS84");
+
+                window.toMap = proj4(pointcloudProjection, mapProjection);
+                window.toScene = proj4(mapProjection, pointcloudProjection);
+
+                {
+                    let bb = potreeViewer.getBoundingBox();
+
+                    let minWGS84 = proj4(pointcloudProjection, mapProjection, bb.min.toArray());
+                    let maxWGS84 = proj4(pointcloudProjection, mapProjection, bb.max.toArray());
+                }
+            });
+
+            function loop(timestamp){
+                requestAnimationFrame(loop);
+
+                potreeViewer.update(potreeViewer.clock.getDelta(), timestamp);
+
+                potreeViewer.render();
+
+                if(window.toMap !== undefined){
+
+                    {
+                        let camera = potreeViewer.scene.getActiveCamera();
+
+                        let pPos		= new THREE.Vector3(0, 0, 0).applyMatrix4(camera.matrixWorld);
+                        let pRight  = new THREE.Vector3(600, 0, 0).applyMatrix4(camera.matrixWorld);
+                        let pUp		 = new THREE.Vector3(0, 600, 0).applyMatrix4(camera.matrixWorld);
+                        let pTarget = potreeViewer.scene.view.getPivot();
+
+                        let toCes = (pos) => {
+                            let xy = [pos.x, pos.y];
+                            let height = pos.z;
+                            let deg = toMap.forward(xy);
+                            let cPos = Cesium.Cartesian3.fromDegrees(...deg, height);
+
+                            return cPos;
+                        };
+
+                        let cPos = toCes(pPos);
+                        let cUpTarget = toCes(pUp);
+                        let cTarget = toCes(pTarget);
+
+                        let cDir = Cesium.Cartesian3.subtract(cTarget, cPos, new Cesium.Cartesian3());
+                        let cUp = Cesium.Cartesian3.subtract(cUpTarget, cPos, new Cesium.Cartesian3());
+
+                        cDir = Cesium.Cartesian3.normalize(cDir, new Cesium.Cartesian3());
+                        cUp = Cesium.Cartesian3.normalize(cUp, new Cesium.Cartesian3());
+
+                        cesiumViewer.camera.setView({
+                            destination : cPos,
+                            orientation : {
+                                direction : cDir,
+                                up : cUp
+                            }
+                        });
+
+                    }
+
+                    let aspect = potreeViewer.scene.getActiveCamera().aspect;
+                    if(aspect < 1){
+                        let fovy = Math.PI * (potreeViewer.scene.getActiveCamera().fov / 180);
+                        cesiumViewer.camera.frustum.fov = fovy;
+                    }else{
+                        let fovy = Math.PI * (potreeViewer.scene.getActiveCamera().fov / 180);
+                        let fovx = Math.atan(Math.tan(0.5 * fovy) * aspect) * 2
+                        cesiumViewer.camera.frustum.fov = fovx;
+                    }
+
+                }
+
+                cesiumViewer.render();
+            }
+
+            requestAnimationFrame(loop);
+
+
+        </script>
+
+    </section>
+
+    <!-- the first chart -->
+    <section class="bg-apple">
+        <div id="mychart1">
+
+            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999;" class="wrap aligncenter">
+                <h1>
+                    <strong>115 Years of Oregon Climate Data</strong>
+                </h1>
+            </div>
+
+            <div id="chart1"></div>
+        </div>
+    </section>
+
+
+    <!-- the second map -->
+    <section class="bg-apple">
+
+        <div id="mymap2">
+            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999; color: red;" class="wrap aligncenter">
+                <h1>
+                    <strong>The Red-Zone: The Southeast USA</strong>
+                </h1>
+            </div>
+        </div>
+        <img src="img/tpb1.png" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;">
+    </section>
+
+    <!-- the second chart -->
+    <section class="bg-apple">
+        <div id="mychart2">
+
+            <div style="font-family: 'Playfair Display', serif; position:absolute; top: 10%;z-index: 999;" class="wrap aligncenter">
+                <h1>
+                    <strong>115 Years of Florida Climate Data</strong>
+                </h1>
+            </div>
+
+            <div id="chart2"></div>
+
+        </div>
+    </section>
+
+    <section class="slide-top bg-trans-dark" style="font-family: 'Playfair Display', serif;">
+
+        <center><h2><strong>Credits</strong></h2></center><br><br>
+
+        <ul class="flexblock border" >
+            <li>
+                <strong><u>Video</u></strong><br>https://climate.nasa.gov/climate_resources/101/video-global-temperature-variation/
+            </li>
+            <li>
+                <strong><u>Favicon</u></strong><br>Obtained via IconFinder
+            </li>
+            <li>
+                <strong><u>Javascript Libraries</u></strong><br>D3.js, C3.js, Leaflet.js
+            </li>
+            <li>
+                <strong><u>Climate Data (Dynamic Maps)</u></strong><br>https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data
+            </li>
+            <li>
+                <strong><u>Climate Data (Static Charts)</u></strong><br>PRISM Project @ Oregon State University
+            </li>
+            <li>
+                <strong><u>HTML/JS/CSS libs</u></strong></br>https://webslides.tv/
+            </li>
+            <li>
+                <strong><u>Google Fonts</u></strong></br>https://fonts.googleapis.com/css?family=Playfair+Display&display=swap
+            </li>
+        </ul>
+
+    </section>
+
+</article>
+
+<script>
+    // make the web slide object.
+    var ws = new WebSlides();
+
+
+    var maxBounds = [
+        [5.499550, -167.276413],
+        [83.162102, -52.233040]
+    ];
+
+    var bounds = L.latLngBounds(maxBounds);
+
+    //Map2
+
+    var map2 = L.map("mymap2", {
+        zoomControl: false,
+        scrollWheelZoom: false
+    }).setMaxBounds(maxBounds);
+
+
+    map2.fitBounds(bounds);
+
+    let data1 = d3.csv("https://tbraun96.github.io/lab3/assets/Florida.csv").then(function (data) {
+
+        console.log("There exist " + data.length + " data points for Florida\nSample point:");
+        console.log(data[0]);
+    });
+
+    d3.select("#mymap2").data(data1);
+
+
+    // add a basemap for the second map
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}@2x.png', {
+        maxZoom: 19
+    }).addTo(map2);
+
+
+    // bind a function to the slide change event of web slides
+    ws.el.addEventListener('ws:slide-change', function () {
+
+        // capture all the div under the currently displaying section
+        crtDiv = $(".current div");
+        //Map 1 'flyto' animation location and function
+         if (crtDiv.attr("id") === "mymap2") {
+            // Checks if the map container size changed and updates the map if so
+            map2.invalidateSize();
+            //Fly to a new location.
+            map2.flyTo([29.0902, -85.7129], 7, {
+                animate: true,
+                duration: 4
+            });
+        }  else if (crtDiv.attr("id") === "mychart1") {
+
+            var chart = c3.generate({
+                bindto: '#chart1',
+                data: {
+                    url: 'https://tbraun96.github.io/lab3/assets/oregon.csv',
+                    x: 'date',
+                    xFormat: '%Y',
+                    type: 'spline',
+                },
+
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        tick: {
+                            format: '%Y'
+                        },
+                        label: {
+                            text: 'Time (year)',
+                            position: 'outer-middle'
+                        }
+                    },
+
+                    y: {
+                        label: {
+                            text: 'Centigrade',
+                            position: 'out-center'
+                        }
+                    }
+
+                }
+            });
+
+        } else if (crtDiv.attr("id") == "mychart2") {
+
+            var chart = c3.generate({
+                bindto: '#chart2',
+                data: {
+                    url: 'https://tbraun96.github.io/lab3/assets/Florida.csv',
+                    x: 'date',
+                    xFormat: '%Y',
+                    type: 'spline',
+                    columns: [
+                        ['AverageTemperature', -10, 0, 10, 100]
+                    ]
+                },
+
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        tick: {
+                            format: '%Y'
+                        },
+                        label: {
+                            text: 'Time (year)',
+                            position: 'outer-middle'
+                        }
+                    },
+
+                    y: {
+                        label: {
+                            text: 'Centigrade',
+                            position: 'out-center'
+                        }
+                    }
+
+                }
+            });
+
+        }
+
+    });
+</script>
+</body>
+
+</html>

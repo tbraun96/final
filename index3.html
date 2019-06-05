@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>lab 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="please add">
+  <!-- CSS Base -->
+  <link rel="stylesheet" type='text/css' media='all' href="css/webslides.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+  <!-- Javascript Library -->
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/webslides.min.js"></script>
+  <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
+</head>
+
+<body>
+  <article id="webslides">
+    <section>
+      <span class="background" style="background-image:url('https://source.unsplash.com/UJbHNoVPZW0/')"></span>
+      <div class="wrap">
+        <h1>Landscape</h1>
+      </div>
+    </section>
+    <section>
+      <span class="background" style="background-image:url('img/kitsanoo-65241-unsplash.jpg')"></span>
+      <div class="wrap">
+        <h1>Kitty</h1>
+      </div>
+    </section>
+    <!-- the map -->
+    <!-- refer to https://webslides.tv/demos/components#slide=15 -->
+    <!-- refer to https://webslides.tv/demos/components#slide=1 -->
+    <section class="bg-apple slide-top">
+      <div id="mymap"></div>
+      <div class="wrap">
+        <div class="content-left">
+          <p><span id="show">Show</span> | <span id="hide">Hide</span></p>
+          <div id="chart"></div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+  <script>
+    // make the web slide object.
+    var ws = new WebSlides();
+    // decalre the second map object
+    var map = L.map("mymap", {
+      zoomControl: false,
+      scrollWheelZoom: false
+    }).fitBounds([
+      [49.3, -138.5],
+      [22.8, -67.4]
+    ]); // fitBounds will fit the map to the boundary of the viewport (monitor)
+
+    // add a basemap for the second map
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}@2x.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    // L.marker([45.514685, -122.987080]).addTo(map)
+    // .bindPopup('')
+    // .openPopup();
+
+
+    $("#show").on("click", function() {
+
+      $("#chart").show();
+
+    })
+
+    $("#hide").on("click", function() {
+      $("#chart").hide();
+    });
+
+    var mapChart = c3.generate({
+      bindto: "#chart",
+      size: {
+        height: 250,
+        width: 500
+      },
+      data: {
+        columns: [
+          ['data1', 30, 200, 100, 400, 150, 250]
+        ],
+        types: {
+          data2: 'line' // ADD
+        }
+      }
+    });
+
+    // bind a function to the slide change event of web slides
+    ws.el.addEventListener('ws:slide-change', function() {
+      // capture all the div under the currently displaying section
+      crtDiv = $(".current div");
+      if (crtDiv.attr("id") === "mymap") {
+        // Checks if the map container size changed and updates the map if so
+        map.invalidateSize();
+
+        map.fitBounds([
+          [49.3, -138.5],
+          [22.8, -67.4]
+        ]);
+        mapChart.resize({
+          height: 250,
+          width: 500
+        });
+      }
+
+    });
+  </script>
+</body>
+
+</html>

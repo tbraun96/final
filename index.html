@@ -365,6 +365,11 @@
 
 
     var potree_loaded = false;
+    if (window.location.href.includes("&doReload=1")){
+        console.log("Detected doReload=1");
+        load_sys();
+        potree_loaded = true;
+    }
     // bind a function to the slide change event of web slides
     ws.el.addEventListener('ws:slide-change', function () {
 
@@ -385,6 +390,11 @@
              if (!potree_loaded){
                  load_sys();
                  potree_loaded = true;
+             } else {
+                 var newUrl = window.location.href + "&doReload=1";
+                 console.log("Resetting location to " + newUrl);
+                 location.href = newUrl;
+                 location.reload(true);
              }
          } else if (crtDiv.attr("id") === "mychart1") {
 

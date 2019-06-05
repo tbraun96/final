@@ -123,6 +123,9 @@
                     terrainShadows: Cesium.ShadowMode.DISABLED,
                 });
 
+
+
+
                 let cp = new Cesium.Cartesian3(4303414.154026048, 552161.235598733, 4660771.704035539);
                 cesiumViewer.camera.setView({
                     destination : cp,
@@ -148,6 +151,7 @@
                     $("#menu_appearance").next().show();
                     //viewer.toggleSidebar();
                 });
+
 
                 Potree.loadPointCloud("pointclouds/saddleback/cloud.js", "sigeom.sa", e => {
                     potreeViewer.scene.addPointCloud(e.pointcloud);
@@ -184,6 +188,15 @@
                     potreeViewer.update(potreeViewer.clock.getDelta(), timestamp);
 
                     potreeViewer.render();
+
+                    potreeViewer.scene.getActiveCamera().addEventListener(
+                        function() {
+                            if (potreeViewer.scene.getActiveCamera()._suspendTerrainAdjustment && potreeViewer.scene.getActiveCamera().scene.mode === Cesium.SceneMode.SCENE3D) {
+                                potreeViewer.scene.getActiveCamera()._suspendTerrainAdjustment = false;
+                                potreeViewer.scene.getActiveCamera()._adjustHeightForTerrain();
+                            }
+                        }
+                    );
 
                     if(window.toMap !== undefined){
 

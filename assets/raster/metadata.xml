@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20190605</CreaDate><CreaTime>11260300</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\LasDatasetToRaster" Date="20190605" Time="112603">LasDatasetToRaster merged_3.las C:\Users\tbrau\OneDrive\Desktop\geog\final\final\assets\raster Elevation "BINNING AVERAGE LINEAR" "Floating Point" "Cell Size" 10 1</Process></lineage></DataProperties></Esri></metadata>

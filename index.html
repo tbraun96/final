@@ -20,6 +20,10 @@
     <script src="https://unpkg.com/d3@5/dist/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.14/c3.min.js"></script>
 
+    <script src="libs/geotiff/leaflet-geotiff.js"></script>
+    <!-- Load any renderer you need -->
+    <script src="libs/geotiff/leaflet-geotiff-plotty.js"></script>
+    <script src="libs/geotiff/leaflet-geotiff-vector.js"></script>
 
     <link rel="stylesheet" type="text/css" href="build/potree/potree.css">
     <link rel="stylesheet" type="text/css" href="libs/jquery-ui/jquery-ui.min.css">
@@ -340,6 +344,7 @@
         subdomains:['mt0','mt1','mt2','mt3']
     }).addTo(map2);
 
+    var geotiff = L.leafletGeotiff("assets/raster.tif", null).addTo(map2);
 
     var potree_loaded = false;
     if (window.location.href.includes("&doReload=1")){

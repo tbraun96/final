@@ -39,9 +39,9 @@
 	--bg-dark-color:	rgba( 24, 31, 33, 1);
 	--bg-hover-color:	var(--color-2);
 
-	--font-color-2:		#ddd;
+	--font-color-2:		#fff;
 	--font-color: #000000;
-	--border-color:		black;
+	--border-color:		rgba(255,255,255, 0.7);
 	
 	--measurement-detail-node-bg-light:		var(--color-1);
 	--measurement-detail-node-bg-dark:		var(--color-2);
@@ -116,7 +116,7 @@
 	overflow-y:	auto;
 	font-size:	85%;
 	overflow: 	hidden;
-	border-right:	1px solid black;
+	border-right:	2px solid rgba(255,255,255, 0.7);
 }
 
 .potree_sidebar_brand{
@@ -452,7 +452,7 @@ body{
 }
 
 .accordion > h3{
-	background-color: var(--bg-color-2) !important;
+	background-color: rgba(40, 70, 35, 0.9) !important;
 	background: #f6f6f6 50% 50% repeat-x;
 	border:		1px solid black;
 	color:		var(--font-color-2);

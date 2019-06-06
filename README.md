@@ -1,14 +1,18 @@
-# Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest
+## Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest
 ##### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-### About
+#### About
 
 
-### Goal
+#### Goal
 
 Our project goal was to visualize a LiDAR point cloud of a forest stand with terrain elements. This project stems from research creating point cloud visualization models to ensure maximized forest aesthetics. Point clouds capture high detail stand structure. Managers can use these models to pre-visualize timber harvests by simulating specific tree removal. An important element for this visualization is terrain. Depending on the terrain and residual structure of the post-harvest stand, it is possible to occlude or hide a timber harvest to increase forest aesthetics. We were initially interested in integrating a forest point cloud with a viewshed analysis tool utilizing terrain. Our base goal was to overlay a point cloud on a 3D terrain map for web visualization. Future development could include a viewshed analysis tool. The project template is transferrable for future forest stand visualization.
 
-Technical summary: You are required to explain (1) system architecture, (2) the main functions of your web map using either screenshots of the web map or a code snippet of the function, and a concomitant description.
+#### Technical Summary
+
+*System Architecture*
+
+*Functions* of your web map using either screenshots of the web map or a code snippet of the function
 
 Example Potree Conversion command:
 
@@ -16,27 +20,27 @@ Example Potree Conversion command:
 PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" -o web -p index
 ```
 
+#### Concept
 
-### Concept
+![](/img/viewshed_sketch_1.JPG)
+![](/img/final_site.JPG)
 
-[]!(/img/sketch_4.jfif)
+#### Design Scheme
 
-### Design Scheme
-
-### Data Source
+#### Data Source
 
 We
 
-### Libraries and Web Services
+#### Libraries and Web Services
 
-[GitHub] hosts the visualization.
+[GitHub](https://github.com/) hosts the visualization.
 
-### Credits
+#### Credits
 
-Bryan Begay, Thomas Braun, Katie Nicolato (2019)
+Bryan Begay, Thomas Braun, Katie Nicolato (2019)</br>
 [Oregon State University Cartography and Geovisualization Group](https://geoviz.ceoas.oregonstate.edu/)
 
-### Acknowledgements
+#### Acknowledgements
 
-[Dr. Bo Zhao](https://ceoas.oregonstate.edu/profile/zhao/), GEOG 572 Geovisual Analytics Instructor, Oregon State University
+[Dr. Bo Zhao](https://ceoas.oregonstate.edu/profile/zhao/), GEOG 572 Geovisual Analytics Instructor, Oregon State University</br>
 [Oregon Lidar Consortium](https://www.oregongeology.org/lidar/)

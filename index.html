@@ -161,7 +161,7 @@ text-align: center;" class="wrap aligncenter">
                 });
 
 
-                Potree.loadPointCloud("pointclouds/saddleback/cloud.js", "sigeom.sa", e => {
+                Potree.loadPointCloud("pointclouds/saddleback/cloud.js", "saddleback.sa", e => {
                     potreeViewer.scene.addPointCloud(e.pointcloud);
                     e.pointcloud.position.z = 170;
                     let material = e.pointcloud.material;

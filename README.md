@@ -24,23 +24,26 @@ Our project goal was to visualize a LiDAR point cloud of a forest stand with ter
 
 ### Technical Summary
 
-Light Detection and Ranging explanation
-
 **System Architecture**
 
-We converted the LiDAR point cloud file into a web format using the [Potree Converter]() tool.
+We converted the LiDAR point cloud file into a web format using the [Potree Converter](https://github.com/potree/PotreeConverter) tool.
 
 Example Potree Conversion command:
 
 >``` PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" -o web -p index ```
 
-We consequently projected the 3D forest stand onto a digital surface model provided by Cesium 3D World Viewer
+We consequently projected the 3D forest stand onto a digital surface model provided by Cesium 3D World Terrain.
 
-We used Webslides format
+We used WebSlides to create a 4-slide visualization:
 
-**Functions** of your web map using either screenshots of the web map or a code snippet of the function
+> Slide 1 introduces the visualization and plays Unmanned Aerial System footage of the target forest stand.</br>
+> Slide 2 describes the visualization background and context.</br>
+> Slide 3 displays the complete 3D LiDAR visualization with a tool sidebar.</br>
+> Slide 4 displays the credits.</br>
 
-This geovisualization serves both science communication and quantitative purposes.
+**Functions**
+
+This geovisualization serves both science communication and quantitative purposes. The 3D LiDAR model presents a novel web visualization method for geospatial data interpretation. The sidebar in the 3D viewer allows user manipulation and measurement of the point cloud and terrain model.
 
 ### Concept
 #### Vision </br>
@@ -52,20 +55,37 @@ This geovisualization serves both science communication and quantitative purpose
 
 ### Design Scheme
 
-We used Webslides to create a 4-slide visualization:
+[WebSlides](https://webslides.tv/#slide=1) creates a 4-slide visualization.</br>
+[Google Fonts](https://fonts.google.com/) supplied the Titillium Web font.</br>
 
-> Slide 1 introduces the visualization and hosts Unmanned Aerial System footage of the target forest stand.</br>
-> Slide 2 </br>
-> Slide 3 </br>
-> Slide 4 </br>
+An example of design code adjusting text box size, shadow, and color:</br>
+![](/img/designcode.JPG)</br>
 
 ### Data Sources
 
 LiDAR point cloud files (.las) were acquired from the [DOGAMI Lidar Viewer.](https://gis.dogami.oregon.gov/maps/lidarviewer/)</br>
-
 Developers acquired aerial video footage of the target forest stand with a [DJI Phantom 4](https://www.dji.com/phantom-4) Unmanned Aerial System.</br>
 
 ### Libraries
+
+Cesium
+MeshLine
+d3
+geotiff
+i18next
+jquery-ui
+jquery
+jstree
+leaflet
+openlayers3
+perfect-scrollbar
+plasio
+potree
+proj4
+shapefile
+spectrum
+three.js
+tween
 
 ### Web Services
 [Potree Converter](https://github.com/potree/PotreeConverter) transforms the .las cloud file into a web-friendly format.</br>

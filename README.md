@@ -1,7 +1,7 @@
 ## Web Visualizing a LiDAR Point Cloud of a Stand in the McDonald-Dunn Forest
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-<img src="assets/carto2.png" width="250"><img src="assets/ais_logo.png" width="200"><img src="assets/MARS250.png" width="100"></br><img src="assets/osu.png" width="200">
+<img src="assets/carto2.png" width="225"><img src="assets/ais_logo.png" width="200"><img src="assets/MARS250.png" width="100"></br><img src="assets/osu.png" width="200">
 
 ### About
 
@@ -59,7 +59,7 @@ We used Webslides to create a 4-slide visualization:
 
 ### Data Sources
 
-LiDAR point cloud files (.las) were acquired from the [Oregon Department of Geology and Mineral Industries (DOGAMI) Lidar Viewer.](https://gis.dogami.oregon.gov/maps/lidarviewer/)</br>
+LiDAR point cloud files (.las) were acquired from the [DOGAMI Lidar Viewer.](https://gis.dogami.oregon.gov/maps/lidarviewer/)</br>
 
 Developers acquired aerial video footage of the target forest stand with a [DJI Phantom 4](https://www.dji.com/phantom-4) Unmanned Aerial System.</br>
 

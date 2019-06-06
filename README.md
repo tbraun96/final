@@ -28,7 +28,7 @@ Light Detection and Ranging explanation
 
 We converted the LiDAR point cloud file into a web format using the [Potree Converter]() tool.
 
->Example Potree Conversion command:
+Example Potree Conversion command:
 
 >``` PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" -o web -p index ```
 

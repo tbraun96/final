@@ -33,7 +33,7 @@
 	--color-3: 			rgba( 45,109,130, 1);
 	--color-4: 			rgba( 16,143,185, 1);
 	
-	--bg-color:			var(--color-0);
+	--bg-color:			rgba(255, 255, 255, 1);
 	--bg-color-2:		rgb(60, 80, 85);
 	--bg-light-color:	rgba( 48, 61, 65, 1);
 	--bg-dark-color:	rgba( 24, 31, 33, 1);

@@ -1,7 +1,7 @@
 ## Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest
-### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
+#### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-![](/img/carto_geo.png)![](/img/ais_logo.png)![](/img/MARS250.png)
+![](/img/carto2.png)![](/img/ais_logo.png)![](/img/MARS250.png)![](/img/osu.png)
 
 ### About
 
@@ -10,9 +10,9 @@ This geovisualization displays a coniferous forest stand in the McDonald-Dunn fo
 
 We feature a 3D LiDAR point cloud (Light Detection and Ranging) overlaid onto a terrain map with a toolbar for manipulating the visualization. Several geovisualization tools communicate the stand features:
 
-> Unmanned Aerial System video footage of the stand familiarizes the user with the environment
-> A 3D LiDAR cloud enables 360-degree stand visualization, quantification and immersion
-> A topographic terrain model orients the stand in context with Willamette Valley geography
+> Unmanned Aerial System video footage of the stand familiarizes the user with the environment</br>
+> A 3D LiDAR cloud enables 360-degree stand visualization, quantification and immersion</br>
+> A topographic terrain model orients the stand in context with Willamette Valley geography</br>
 
 This geovisualization serves both science communication and quantitative purposes. We designed the project template as an adaptable tool for future forest stand visualization.
 
@@ -41,17 +41,18 @@ PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +e
 ### Concept
 **Vision**</br>
 ![](/img/viewshed_sketch_1.JPG)
-**Geovisualization**</br>
+</br>
+**Visualization**</br>
 ![](/img/final_site.JPG)
 
 ### Design Scheme
 
 We used Webslides to create a 4-slide visualization:
 
-> Slide 1 introduces the visualization and hosts Unmanned Aerial System footage of the target forest stand.
-> Slide 2
-> Slide 3
-> Slide 4
+> Slide 1 introduces the visualization and hosts Unmanned Aerial System footage of the target forest stand.</br>
+> Slide 2 </br>
+> Slide 3 </br>
+> Slide 4 </br>
 
 ### Data Sources
 
@@ -59,9 +60,12 @@ LiDAR point cloud files (.las) were acquired from the [Oregon Department of Geol
 
 Developers acquired aerial video footage of the target forest stand with a [DJI Phantom 4](https://www.dji.com/phantom-4) Unmanned Aerial System.</br>
 
-### Libraries and Web Services
+### Libraries
 
-[Potree Converter](https://github.com/potree/PotreeConverter) transforms the LAS cloud file into a web-friendly format.</br>
+
+
+### Web Services
+[Potree Converter](https://github.com/potree/PotreeConverter) transforms the .las cloud file into a web-friendly format.</br>
 [Potree Viewer](http://potree.org/) renders the forested point cloud.</br>
 [Cesium ion](https://cesium.com/) renders the terrain map.</br>
 [GitHub](https://github.com/) hosts the visualization.</br>

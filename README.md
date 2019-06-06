@@ -77,7 +77,7 @@ Developers acquired aerial video footage of the target forest stand with a [DJI 
 ### Developers
 
 [Bryan Begay](https://github.com/gimbalmonkey), Forest Engineering, Resources and Management, Oregon State University</br>
-[Thomas Braun](https://github.com/tbraun96), College of Earth, Ocean, and Atmospheric Sciences, Oregon State University</br>
+[Thomas Braun](https://thomaspbraun.com), College of Earth, Ocean, and Atmospheric Sciences, Oregon State University</br>
 [Katie Nicolato](https://github.com/kitnixx), Forest Engineering, Resources and Management, Oregon State University</br>
 
 ### Acknowledgements

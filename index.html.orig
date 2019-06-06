@@ -39,7 +39,7 @@
         }
     </style>
     <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -82,7 +82,7 @@
                 });
             </script>
         </video>
-        <div style="font-family: 'Playfair Display', serif; border;
+        <div style="font-family: 'Titillium Web', sans-serif; border;
 color: #1a2028;
 -webkit-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.7);
 -moz-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.7);
@@ -91,26 +91,13 @@ box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.7);
 text-align: center;
 background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
             <h2>
-                <strong> Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Research Forest</strong>
+                <strong> Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest</strong>
             </h2>
             <div style="z-index: 999; text-align: center">
             <h3>
-              <strong>Corvallis, Oregon, USA</strong>
+              <strong>Corvallis, OR, USA</strong>
             </h3>
           </div>
-=======
-text-align: center;" class="wrap aligncenter">
-            <h1>
-                <strong>Web geovisualization of a point cloud on a stand in the McDonald-Dunn forest</strong>
-            </h1>
-
-            <div style="z-index: 999; text-align: center">
-                <h4>
-                    <strong>By Katharine Nicolato, Bryan Begay, and Thomas Braun</strong>
-                </h4>
-            </div>
-
->>>>>>> 89988aca0b8f65fe792be90f34c369d4fcebc243
         </div>
 
         <div style = "z-index: 999; border: 2px black; background-color: rgba(255,255,255, 0.7); position: absolute; top: 0; left: 0; width: 100%; max-height: 250px; min-height: 150px; height: 13%;">
@@ -124,7 +111,7 @@ text-align: center;" class="wrap aligncenter">
 
         <div id="potree" class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
 
-            <div style="font-family: 'Playfair Display', serif; align-content: center; padding-bottom: 30px; padding-top: 10px;
+            <div style="font-family: 'Titillium Web', sans-serif; align-content: center; padding-bottom: 30px; padding-top: 10px;
 color: #1a2028;
 -webkit-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
 -moz-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
@@ -305,7 +292,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
     <section class="slideInRight">
 
         <div id="mymap2">
-            <div style="font-family: 'Playfair Display', serif; padding-bottom: 30px; padding-top: 10px;
+            <div style="font-family: 'Titillium Web', sans-serif; padding-bottom: 30px; padding-top: 10px;
 color: #1a2028;
 -webkit-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
 -moz-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
@@ -314,7 +301,7 @@ text-align: center;
 z-index: 999;
 top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                 <h1>
-                    <p class = "text-subtitle">Information of The Point Cloud and The Region</p>
+                    <p class = "text-subtitle">Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest</p>
                 </h1>
             </div>
         </div>
@@ -325,7 +312,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
 box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
 text-align: center; background-color: rgba(255,255,255, 0.7);">
                 <h1>
-                    <p class = "text-subtitle" style = "font: 30px Sans-Serif"><br>Insert Title Heading here Brian! <br><br></p>
+                    <p class = "text-subtitle" style = "font: 30px Sans-Serif"><br>About the Saddleback Stand Geovisualization<br><br></p>
 =======
         <div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;color: black;">
 
@@ -341,7 +328,7 @@ text-align: center; background-color: rgba(255,255,255, 0.7);">
         </div>
     </section>
 
-    <section class="slide-top bg-trans-dark" style="font-family: 'Playfair Display', serif;">
+    <section class="slide-top bg-trans-dark" style="font-family: 'Titillium Web', sans-serif;">
 
         <center><h2><strong>Credits</strong></h2></center><br><br>
 

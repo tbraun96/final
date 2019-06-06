@@ -10,9 +10,9 @@ This geovisualization displays a coniferous forest stand in the McDonald-Dunn fo
 
 We feature a 3D LiDAR point cloud (Light Detection and Ranging) overlaid onto a terrain map with a toolbar for manipulating the visualization. Several geovisualization tools communicate the stand features:
 
-> Unmanned Aerial System video footage of the stand familiarizes the user with the environment</br>
-> A 3D LiDAR cloud enables 360-degree stand visualization, quantification and immersion</br>
-> A topographic terrain model orients the stand in context with Willamette Valley geography</br>
+> * Unmanned Aerial System video footage of the stand familiarizes the user with the environment</br>
+> * A 3D LiDAR cloud enables 360-degree stand visualization, quantification and immersion</br>
+> * A topographic terrain model orients the stand in context with Willamette Valley geography</br>
 
 This geovisualization serves both science communication and quantitative purposes. We designed the project template as an adaptable tool for future forest stand visualization.
 

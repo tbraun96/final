@@ -43,12 +43,12 @@ We used Webslides format
 This geovisualization serves both science communication and quantitative purposes.
 
 ### Concept
-**Vision**</br>
+#### Vision </br>
 ![](/img/viewshed_sketch_1.JPG)
 </br>
 </br>
-**Visualization**</br>
-![](/img/final_vis.JPG)
+#### Visualization </br>
+![](/img/final_vis.JPG)</br>
 
 ### Design Scheme
 

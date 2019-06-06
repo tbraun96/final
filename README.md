@@ -44,6 +44,7 @@ PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +e
 **Vision**</br>
 ![](/img/viewshed_sketch_1.JPG)
 </br>
+</br>
 **Visualization**</br>
 ![](/img/final_site.JPG)
 

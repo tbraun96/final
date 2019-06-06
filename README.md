@@ -29,10 +29,12 @@ PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +e
 
 #### Data Source
 
-We
+[Oregon Department of Geology and Mineral Industries (DOGAMI) Lidar Viewer](https://gis.dogami.oregon.gov/maps/lidarviewer/)
 
 #### Libraries and Web Services
 
+[Potree Converter](https://github.com/potree/PotreeConverter) transforms the LAS cloud file into a web-friendly format.
+[Cesium ion](https://cesium.com/) hosts the terrain map 
 [GitHub](https://github.com/) hosts the visualization.
 
 #### Credits

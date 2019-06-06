@@ -3373,8 +3373,8 @@ Features & Clients List
   border-right: 1px solid rgba(0, 20, 80, 0.1); }
 
 .border li {
-  border-left: 3px solid rgba(210, 174, 42, 0.35);
-  border-top: 3px solid rgba(210, 174, 42, 0.35); }
+  border-left: 2px solid rgba(294, 64, 0, 0.8);
+  border-top: 2px solid rgba(294, 64, 0, 0.8); }
 
 .flexblock.border li li {
   border: 0; }

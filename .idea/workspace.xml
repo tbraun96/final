@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/potree/potree.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/potree/potree.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/potree/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/potree/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/webslides.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/webslides.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/img/nasa.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/img/nyt.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/img/tpb1.png" beforeDir="false" />
@@ -26,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="342" column="22" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
+            <state relative-caret-position="440">
+              <caret line="344" column="103" selection-start-line="344" selection-start-column="103" selection-end-line="344" selection-end-column="103" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -44,15 +45,18 @@
                 <element signature="n#style#0;n#div#1;n#section#2;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#section#3;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#section#3;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#section#3;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/webslides.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="3368" column="22" lean-forward="true" selection-start-line="3368" selection-start-column="22" selection-end-line="3368" selection-end-column="22" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -152,6 +156,7 @@
         <option value="$PROJECT_DIR$/build/potree/sidebar.html" />
         <option value="$PROJECT_DIR$/build/potree/potree.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/webslides.css" />
       </list>
     </option>
   </component>
@@ -247,12 +252,12 @@
       <workItem from="1559755065516" duration="2976000" />
       <workItem from="1559758229107" duration="15000" />
       <workItem from="1559758574455" duration="21000" />
-      <workItem from="1559758875761" duration="14931000" />
+      <workItem from="1559758875761" duration="15203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50676000" />
+    <option name="totallyTimeSpent" value="50948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="97" y="252" width="2876" height="1268" extended-state="0" />
@@ -372,10 +377,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/webslides.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="3368" column="22" lean-forward="true" selection-start-line="3368" selection-start-column="22" selection-end-line="3368" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="342" column="22" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
+        <state relative-caret-position="440">
+          <caret line="344" column="103" selection-start-line="344" selection-start-column="103" selection-end-line="344" selection-end-column="103" />
           <folding>
             <element signature="n#style#0;n#div#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -389,13 +401,9 @@
             <element signature="n#style#0;n#div#1;n#section#2;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#3;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#section#3;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#section#3;n#article#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/webslides.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

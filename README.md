@@ -1,7 +1,9 @@
 ## Web Visualizing a LiDAR Point Cloud of a Stand in the McDonald-Dunn Forest
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-<img src="assets/carto2.png" width="250"><img src="assets/osu.png" width="225"><img src="assets/ais_logo.png" width="200"><img src="assets/MARS250.png" width="100">
+
+![](/img/wholestand.JPG)</br>
+<img src="assets/carto2.png" width="250"><img src="assets/osu.png" width="225"><img src="assets/ais_logo.png" width="200"><img src="assets/MARS250.png" width="100"></br>
 
 ### About
 
@@ -41,12 +43,12 @@ We used Webslides format
 This geovisualization serves both science communication and quantitative purposes.
 
 ### Concept
-**Vision**</br>
+#### Vision </br>
 ![](/img/viewshed_sketch_1.JPG)
 </br>
 </br>
-**Visualization**</br>
-![](/img/final_site.JPG)
+#### Visualization </br>
+![](/img/final_vis.JPG)</br>
 
 ### Design Scheme
 
@@ -82,5 +84,5 @@ Developers acquired aerial video footage of the target forest stand with a [DJI 
 [Dr. Bo Zhao](https://ceoas.oregonstate.edu/profile/zhao/), GEOG 572 Geovisual Analytics Instructor, Oregon State University</br>
 [Cartography and Geovisualization Group,](https://geoviz.ceoas.oregonstate.edu/) Oregon State University </br>
 [Aerial Information Systems Lab,](http://ais.forestry.oregonstate.edu/) Oregon State University</br>
-[Management Algorithms and Remote Sensing Lab,](http://mars.forestry.oregonstate.edu/) Oregon State University</br>
+[Management, Algorithms, and Remote Sensing Lab,](http://mars.forestry.oregonstate.edu/) Oregon State University</br>
 [Oregon Lidar Consortium](https://www.oregongeology.org/lidar/)</br>

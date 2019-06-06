@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Geovisual Analytics | LIDAR Exploration</title>
+    <title>Geovisual Analytics| LIDAR Exploration</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="please add">
@@ -106,50 +106,7 @@ background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
         </div>
 
     </section>
-
-    <section class="slideInRight">
-
-        <div id="mymap2">
-            <div style="font-family: 'Titillium Web', sans-serif; padding-bottom: 30px; padding-top: 10px;
-color: #1a2028;
--webkit-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
--moz-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
-text-align: center;
-z-index: 999;
-top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
-                <h1>
-                    <p class = "text-subtitle">About the Geovisualization</p>
-                </h1>
-            </div>
-        </div>
-
-        <div id="info" style="position: absolute; left:0; bottom: 0; height: 30%; width:60%; max-width:800px; color: #1a2028;
--webkit-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
--moz-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
-text-align: center; background-color: rgba(255,255,255, 0.7);">
-            <h1>
-                <p class="text-subtitle" style="font: 30px Titillium"><br>Saddleback Stand <br><br></p>
-                <div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;color: black;">
-
-            </h1>
-            <b>
-            2008 LiDAR point clouds were used to visualize the stand of interest. The stand is called Saddleback and has
-            been previously thinned in 1999. Saddleback
-            is located north of Corvallis and is positioned in a visible location where the town can see the unit. A
-            timber harvest is projected to be performed on
-            Saddleback and creating a model that maximizes forest aesthetics in highly visible stands would be an
-            important tool for foresters. Forestry relies on
-            having a social license to conduct active managment in forests. If society does not accept managment
-            practices near Corvallis because of the negative impacts
-            logging can have on forest aesthetics then the social license can be lost.
-          </b>
-        </div>
-
-
-    </section>
-
+    <!-- the first map -->
     <section class="bg-apple">
 
         <div id="potree" class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
@@ -213,7 +170,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                     useDefaultRenderLoop: false
                 });
                 potreeViewer.setEDLEnabled(true);
-                potreeViewer.setFOV(40);
+                potreeViewer.setFOV(60);
                 potreeViewer.setPointBudget(1000*1000);
                 potreeViewer.setMinNodeSize(0);
                 potreeViewer.loadSettingsFromURL();
@@ -331,8 +288,6 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
 
     </section>
 
-<<<<<<< HEAD
-=======
     <!-- the second map -->
     <section class="slideInRight">
 
@@ -361,18 +316,22 @@ text-align: center; background-color: rgba(255,255,255, 0.7);">
         <div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;color: black;">
 
             Saddleback stand was visualized using LiDAR point clouds from 2008. The Saddleback stand is located north of Corvallis in the McDonald-Dunn Forest and is visible from town.
+
             The stand was previously thinned in 1999. Agencies project a future timber harvest in the Saddleback stand.
+
             Forest aesthetics, or the visual appeal of the Saddleback stand when viewed from Corvallis, will be a variable dictating the harvest treatment in the stand. Foresters must designate a harvest treatemnt for Saddleback that will create optimal forest aesthetics.
+
             Active forest management relies on social license, or the common public acceptance of target management practicies. If society does not accept forest managment practices near Corvallis because of the negative impacts to forest aesthetics, social license may be lost.
+
             Therefore, pre-harvest models simulating maximized post-harvest forest aesthetics in highly visible stands are an important tool for foresters to maintain social license. These models are created through geospatial and statistical analyses of 3D point cloud data.
-            Through the Saddleback geovisualization, we created a web platform for viewing models simulating maximized forest aesthetics. The Saddleback visualization displays a baseline pre-harvest forest stand model. This template is adaptable for visualizing pre-harvest models simulating post-harvest conditions.
+
+            Through the Saddleback geovisualization, we created a web platform for viewing models simulating maximized forest aesthetics. The Saddleback visualization displays a baseline pre-harvest forest stand model. This template is adaptable for users to visualize pre-harvest models simulating post-harvest conditions.
 
                     <p class = "text-info">more text here!</p>
                 </h1>
         </div>
     </section>
 
->>>>>>> 0fbd5939132ec7029a1400d126bca348035b935f
     <section class="slide-top bg-trans-dark" style="font-family: 'Titillium Web', sans-serif;">
 
         <center><h2><strong>Credits</strong></h2></center><br><br>

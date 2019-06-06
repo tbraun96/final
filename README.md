@@ -1,8 +1,8 @@
 ## Web Visualizing a LiDAR Point Cloud of a Stand in the McDonald-Dunn Forest
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-<img src="assets/carto2.png" width="150"><img src="assets/ais_logo.png" width="50">
-<img src="assets/MARS250.png" width="100"><img src="assets/osu.png"  width="100"></br>
+<img src="assets/carto2.png" width="200"><img src="assets/ais_logo.png" width="150">
+<img src="assets/MARS250.png" width="100"><img src="assets/osu.png"  width="150"></br>
 
 ### About
 

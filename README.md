@@ -1,7 +1,10 @@
 ## Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-![](/img/carto2.png)![](/img/ais_logo.png)![](/img/MARS250.png)![](/img/osu.png)
+<img src="assets/carto2.png" style = "max-height: 100px; min-height: 100px; max-width: 25%;">
+<img src="assets/ais_logo.png" style = "max-height: 100px; min-height: 100px; max-width: 25%;">
+<img src="assets/MARS250.png" style = "max-height: 100px; min-height: 100px; max-width: 25%;">
+<img src="assets/osu.png" style = "max-height: 100px; min-height: 100px; max-width: 25%;">
 
 ### About
 
@@ -10,9 +13,9 @@ This geovisualization displays a coniferous forest stand in the McDonald-Dunn fo
 
 We feature a 3D LiDAR point cloud (Light Detection and Ranging) overlaid onto a terrain map with a toolbar for manipulating the visualization. Several geovisualization tools communicate the stand features:
 
-> Unmanned Aerial System video footage of the stand familiarizes the user with the environment</br>
-> A 3D LiDAR cloud enables 360-degree stand visualization, quantification and immersion</br>
-> A topographic terrain model orients the stand in context with Willamette Valley geography</br>
+> * Unmanned Aerial System video footage of the stand familiarizes the user with the environment</br>
+> * A 3D LiDAR cloud enables 360-degree stand visualization, quantification and immersion</br>
+> * A topographic terrain model orients the stand in context with Willamette Valley geography</br>
 
 This geovisualization serves both science communication and quantitative purposes. We designed the project template as an adaptable tool for future forest stand visualization.
 
@@ -41,6 +44,7 @@ PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +e
 ### Concept
 **Vision**</br>
 ![](/img/viewshed_sketch_1.JPG)
+</br>
 </br>
 **Visualization**</br>
 ![](/img/final_site.JPG)

@@ -2,7 +2,7 @@
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
 
-![](/img/final_vis.JPG)</br>
+![](/img/wholestand.JPG)</br>
 <img src="assets/carto2.png" width="250"><img src="assets/osu.png" width="225"><img src="assets/ais_logo.png" width="200"><img src="assets/MARS250.png" width="100"></br>
 
 ### About

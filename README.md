@@ -1,10 +1,10 @@
 ## Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
-<img src="assets/carto2.png" width="200">
+<img src="assets/carto2.png" width="300">
 <img src="assets/ais_logo.png" width="200">
-<img src="assets/MARS250.png" width="200">
-<img src="assets/osu.png"  width="200">
+<img src="assets/MARS250.png" width="150">
+<img src="assets/osu.png"  width="300">
 
 ### About
 
@@ -29,17 +29,19 @@ Light Detection and Ranging explanation
 
 **System Architecture**
 
-We converted the LiDAR cloud using the Potree Converter tool
+We converted the LiDAR point cloud file into a web format using the [Potree Converter]() tool.
 
-Webslides format
+>Example Potree Conversion command:
+
+>``` PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" -o web -p index ```
+
+We consequently projected the 3D forest stand onto a digital surface model provided by Cesium 3D World Viewer
+
+We used Webslides format
 
 **Functions** of your web map using either screenshots of the web map or a code snippet of the function
 
-Example Potree Conversion command:
-
-```
-PotreeConverter.exe assets/merge.las -o web  --projection "+proj=utm +zone=10 +ellps=GRS80 +datum=NAD83 +units=m +no_defs" -o web -p index
-```
+This geovisualization serves both science communication and quantitative purposes.
 
 ### Concept
 **Vision**</br>
@@ -65,8 +67,6 @@ LiDAR point cloud files (.las) were acquired from the [Oregon Department of Geol
 Developers acquired aerial video footage of the target forest stand with a [DJI Phantom 4](https://www.dji.com/phantom-4) Unmanned Aerial System.</br>
 
 ### Libraries
-
-
 
 ### Web Services
 [Potree Converter](https://github.com/potree/PotreeConverter) transforms the .las cloud file into a web-friendly format.</br>

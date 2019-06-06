@@ -27,19 +27,20 @@
     <link rel="stylesheet" type="text/css" href="libs/openlayers3/ol.css">
     <link rel="stylesheet" type="text/css" href="libs/spectrum/spectrum.css">
     <link rel="stylesheet" type="text/css" href="libs/jstree/themes/mixed/style.css">
-    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.57/Build/Cesium/Widgets/widgets.css"></head>
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.57/Build/Cesium/Widgets/widgets.css">
+</head>
 
-    <style>
-        #myVideo {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-        }
-    </style>
-    <!--Google Font-->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+<style>
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+</style>
+<!--Google Font-->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -62,7 +63,7 @@
 
 <article id="webslides">
     <section class="bg-white">
-        <video id="myVideo" src = "assets/view01.mp4" autoplay muted>
+        <video id="myVideo" src="assets/view01.mp4" autoplay muted>
             <script>
                 var myvid = document.getElementById('myVideo');
 
@@ -72,7 +73,7 @@
                 ];
                 var activeVideo = 0;
                 myvid.playbackRate = 1.5;
-                myvid.addEventListener('ended', function(e) {
+                myvid.addEventListener('ended', function (e) {
                     // update the new active video index
                     activeVideo = (++activeVideo) % myvids.length;
 
@@ -88,31 +89,34 @@ color: #1a2028;
 -moz-box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.7);
 box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.7);
 text-align: center;
-background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
+background-color: rgba(255,255,255, 0.7);
+z-index: 999" class="wrap aligncenter">
             <h1>
                 <strong>Web geovisualization of a point cloud on a stand in the McDonald-Dunn forest</strong>
             </h1>
 
-<div style="z-index: 999; text-align: center">
-<h3>
-              <strong>Corvallis, Oregon, USA</strong>
-            </h3>
-          </div>
-        </div>
- <h4>
-                    <strong>By Katharine Nicolato, Bryan Begay, and Thomas Braun</strong>
-                </h4>
+            <div style="z-index: 999; text-align: center">
+                <h3>
+                    <strong>Corvallis, Oregon, USA</strong>
+                </h3>
+
+                <h4 style="color: rgba(0, 100, 0, 1);"><b>By Katharine Nicolato, Bryan Begay, and Thomas Braun</b></h4>
             </div>
-        <div style = "z-index: 999; border: 2px black; background-color: rgba(255,255,255, 0.7); position: absolute; top: 0; left: 0; width: 100%; max-height: 250px; min-height: 150px; height: 13%;">
-        <img src="assets/carto.png" style = "position: absolute; left:0; top: 0%; max-height: 150px; max-width: 25%; margin-top: 1%;">
-        <img src="assets/osu2.png" style = "position: absolute; right:0; top: 0; max-height: 170px; max-width: 25%; margin-top: -0.5%;">
+        </div>
+
+        <div style="z-index: 999; border: 2px black; background-color: rgba(255,255,255, 0.7); position: absolute; top: 0; left: 0; width: 100%; max-height: 250px; min-height: 150px; height: 13%;">
+            <img src="assets/carto.png"
+                 style="position: absolute; left:0; top: 0%; max-height: 150px; max-width: 25%; margin-top: 1%;">
+            <img src="assets/osu2.png"
+                 style="position: absolute; right:0; top: 0; max-height: 170px; max-width: 25%; margin-top: -0.5%;">
         </div>
 
     </section>
     <!-- the first map -->
     <section class="bg-apple">
 
-        <div id="potree" class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
+        <div id="potree" class="potree_container"
+             style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
 
             <div style="font-family: 'Playfair Display', serif; align-content: center; padding-bottom: 30px; padding-top: 10px;
 color: #1a2028;
@@ -124,28 +128,29 @@ z-index: 999;
 width:55%;
 top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                 <h1>
-                    <p class = "text-subtitle">Saddleback Stand</p>
+                    <p class="text-subtitle">Saddleback Stand</p>
                 </h1>
                 </h2>
-                    <p class = "text-subtitle">McDonald-Dunn Forest, Corvallis, OR</p>
+                <p class="text-subtitle">McDonald-Dunn Forest, Corvallis, OR</p>
                 </h2>
             </div>
 
             <div id="potree_render_area">
-                <div id="cesiumContainer" style="position: absolute; width: 100%; height: 100%; background-color:transparent"></div>
+                <div id="cesiumContainer"
+                     style="position: absolute; width: 100%; height: 100%; background-color:transparent"></div>
             </div>
-            <div id="potree_sidebar_container"> </div>
+            <div id="potree_sidebar_container"></div>
         </div>
 
         <script>
-            function load_sys(){
+            function load_sys() {
                 window.cesiumViewer = new Cesium.Viewer('cesiumContainer', {
                     useDefaultRenderLoop: false,
                     animation: false,
                     vrButton: false,
-                    baseLayerPicker : false,
+                    baseLayerPicker: false,
                     fullscreenButton: false,
-                    terrainProvider : Cesium.createWorldTerrain(),
+                    terrainProvider: Cesium.createWorldTerrain(),
                     geocoder: false,
                     homeButton: false,
                     infoBox: false,
@@ -157,15 +162,13 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                 });
 
 
-
-
                 let cp = new Cesium.Cartesian3(4303414.154026048, 552161.235598733, 4660771.704035539);
                 cesiumViewer.camera.setView({
-                    destination : cp,
+                    destination: cp,
                     orientation: {
-                        heading : 10,
-                        pitch : -Cesium.Math.PI_OVER_TWO * 0.5,
-                        roll : 0.0
+                        heading: 10,
+                        pitch: -Cesium.Math.PI_OVER_TWO * 0.5,
+                        roll: 0.0
                     }
                 });
 
@@ -174,7 +177,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                 });
                 potreeViewer.setEDLEnabled(true);
                 potreeViewer.setFOV(60);
-                potreeViewer.setPointBudget(1000*1000);
+                potreeViewer.setPointBudget(1000 * 1000);
                 potreeViewer.setMinNodeSize(0);
                 potreeViewer.loadSettingsFromURL();
                 potreeViewer.setBackground(null);
@@ -193,10 +196,10 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                     material.pointColorType = Potree.PointColorType.ELEVATION; // any Potree.PointColorType.XXXX
                     material.pointSizeType = Potree.PointSizeType.ATTENUATED;
                     material.shape = Potree.PointShape.CIRCLE;
-                    material.elevationRange =[170,350]
+                    material.elevationRange = [170, 350]
 
-                    potreeViewer.scene.view.position.set(476828.47,  4943195.899999999, 2067.402);
-                    potreeViewer.scene.view.lookAt(new THREE.Vector3(476828.47,  4942195.899999999, -0.707));
+                    potreeViewer.scene.view.position.set(476828.47, 4943195.899999999, 2067.402);
+                    potreeViewer.scene.view.lookAt(new THREE.Vector3(476828.47, 4942195.899999999, -0.707));
 
                     Potree.measureTimings = true;
 
@@ -215,7 +218,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                     }
                 });
 
-                function loop(timestamp){
+                function loop(timestamp) {
                     requestAnimationFrame(loop);
 
                     potreeViewer.update(potreeViewer.clock.getDelta(), timestamp);
@@ -223,7 +226,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                     potreeViewer.render();
 
                     potreeViewer.scene.getActiveCamera().addEventListener(
-                        function() {
+                        function () {
                             if (potreeViewer.scene.getActiveCamera()._suspendTerrainAdjustment && potreeViewer.scene.getActiveCamera().scene.mode === Cesium.SceneMode.SCENE3D) {
                                 potreeViewer.scene.getActiveCamera()._suspendTerrainAdjustment = false;
                                 potreeViewer.scene.getActiveCamera()._adjustHeightForTerrain();
@@ -231,14 +234,14 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                         }
                     );
 
-                    if(window.toMap !== undefined){
+                    if (window.toMap !== undefined) {
 
                         {
                             let camera = potreeViewer.scene.getActiveCamera();
 
-                            let pPos		= new THREE.Vector3(0, 0, 0).applyMatrix4(camera.matrixWorld);
-                            let pRight  = new THREE.Vector3(600, 0, 0).applyMatrix4(camera.matrixWorld);
-                            let pUp		 = new THREE.Vector3(0, 600, 0).applyMatrix4(camera.matrixWorld);
+                            let pPos = new THREE.Vector3(0, 0, 0).applyMatrix4(camera.matrixWorld);
+                            let pRight = new THREE.Vector3(600, 0, 0).applyMatrix4(camera.matrixWorld);
+                            let pUp = new THREE.Vector3(0, 600, 0).applyMatrix4(camera.matrixWorld);
                             let pTarget = potreeViewer.scene.view.getPivot();
 
                             let toCes = (pos) => {
@@ -261,20 +264,20 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                             cUp = Cesium.Cartesian3.normalize(cUp, new Cesium.Cartesian3());
 
                             cesiumViewer.camera.setView({
-                                destination : cPos,
-                                orientation : {
-                                    direction : cDir,
-                                    up : cUp
+                                destination: cPos,
+                                orientation: {
+                                    direction: cDir,
+                                    up: cUp
                                 }
                             });
 
                         }
 
                         let aspect = potreeViewer.scene.getActiveCamera().aspect;
-                        if(aspect < 1){
+                        if (aspect < 1) {
                             let fovy = Math.PI * (potreeViewer.scene.getActiveCamera().fov / 180);
                             cesiumViewer.camera.frustum.fov = fovy;
-                        }else{
+                        } else {
                             let fovy = Math.PI * (potreeViewer.scene.getActiveCamera().fov / 180);
                             let fovx = Math.atan(Math.tan(0.5 * fovy) * aspect) * 2
                             cesiumViewer.camera.frustum.fov = fovx;
@@ -304,35 +307,42 @@ text-align: center;
 z-index: 999;
 top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                 <h1>
-                    <p class = "text-subtitle">Information of The Point Cloud and The Region</p>
+                    <p class="text-subtitle">Information of The Point Cloud and The Region</p>
                 </h1>
             </div>
         </div>
- <div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px; color: #1a2028;
+        <div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px; color: #1a2028;
 -webkit-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
 -moz-box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
 box-shadow: 21px 21px 60px 0px rgba(0,0,0,0.7);
 text-align: center; background-color: rgba(255,255,255, 0.7);">
-                <h1>
-                    <p class = "text-subtitle" style = "font: 30px Sans-Serif"><br>Insert Title Heading here Brian! <br><br></p>
-<div id="info" style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;color: black;">
+            <h1>
+                <p class="text-subtitle" style="font: 30px Sans-Serif"><br>Insert Title Heading here Brian! <br><br></p>
+                <div id="info"
+                     style="position: absolute; left:0; bottom: 0; height: 50%; width:60%; max-width:800px;color: black;">
 
-                </h1>
-             2008 LiDAR point clouds were used to visualize the stand of interest. The stand is called Saddleback and has been previously thinned in 1999. Saddleback
-            is located north of Corvallis and is positioned in a visible location where the town can see the unit. A timber harvest is projected to be performed on
-            Saddleback and creating a model that maximizes forest aesthetics in highly visible stands would be an important tool for foresters. Forestry relies on
-            having a social license to conduct active managment in forests. If society does not accept managment practices near Corvallis because of the negative impacts
+            </h1>
+            2008 LiDAR point clouds were used to visualize the stand of interest. The stand is called Saddleback and has
+            been previously thinned in 1999. Saddleback
+            is located north of Corvallis and is positioned in a visible location where the town can see the unit. A
+            timber harvest is projected to be performed on
+            Saddleback and creating a model that maximizes forest aesthetics in highly visible stands would be an
+            important tool for foresters. Forestry relies on
+            having a social license to conduct active managment in forests. If society does not accept managment
+            practices near Corvallis because of the negative impacts
             logging can have on forest aesthetics then the social license can be lost.
-</div>
+        </div>
     </section>
 
     <section class="slide-top bg-trans-dark" style="font-family: 'Playfair Display', serif;">
 
-        <center><h2><strong>Credits</strong></h2></center><br><br>
+        <center><h2><strong>Credits</strong></h2></center>
+        <br><br>
 
-        <ul class="flexblock border" >
+        <ul class="flexblock border">
             <li>
-                <strong><u>Video</u></strong><br>Drone footage captured by Katharine Nicolato, Brian Begay, and Thomas Braun
+                <strong><u>Video</u></strong><br>Drone footage captured by Katharine Nicolato, Brian Begay, and Thomas
+                Braun
             </li>
             <li>
                 <strong><u>Favicon</u></strong><br>Obtained via IconFinder
@@ -350,13 +360,16 @@ text-align: center; background-color: rgba(255,255,255, 0.7);">
                 <strong><u>HTML/JS/CSS Visual Libs</u></strong></br>https://webslides.tv/
             </li>
             <li>
-                <strong><u>Google Fonts</u></strong></br>https://fonts.googleapis.com/css?family=Playfair+Display&display=swap
+                <strong><u>Google Fonts</u></strong></br>
+                https://fonts.googleapis.com/css?family=Playfair+Display&display=swap
             </li>
         </ul>
 
-        <div style = "border: 2px black; background-color: rgba(255,255,255, 0.7); position: absolute; bottom: 0; left: 0; width: 100%; max-height: 270px; min-height: 150px; height: 15%;">
-        <img src="assets/carto.png" style = "position: absolute; left:0; bottom: 0; max-height: 150px; min-height: 150px; max-width: 25%;">
-        <img src="assets/osu2.png" style = "position: absolute; right:0; bottom: 0; max-height: 180px; min-height: 150px; max-width: 25%;">
+        <div style="border: 2px black; background-color: rgba(255,255,255, 0.7); position: absolute; bottom: 0; left: 0; width: 100%; max-height: 270px; min-height: 150px; height: 15%;">
+            <img src="assets/carto.png"
+                 style="position: absolute; left:0; bottom: 0; max-height: 150px; min-height: 150px; max-width: 25%;">
+            <img src="assets/osu2.png"
+                 style="position: absolute; right:0; bottom: 0; max-height: 180px; min-height: 150px; max-width: 25%;">
         </div>
 
     </section>
@@ -390,16 +403,16 @@ text-align: center; background-color: rgba(255,255,255, 0.7);">
 
 
     // add a basemap for the second map
-    L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+    L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
         maxZoom: 20,
-        subdomains:['mt0','mt1','mt2','mt3']
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     }).addTo(map2);
 
-    var marker = L.marker([44.636940, -123.292661], { title: "Forest" }).addTo(map2);
+    var marker = L.marker([44.636940, -123.292661], {title: "Forest"}).addTo(map2);
 
 
     var potree_loaded = false;
-    if (window.location.href.includes("&doReload=1")){
+    if (window.location.href.includes("&doReload=1")) {
         console.log("Detected doReload=1");
         load_sys();
         potree_loaded = true;
@@ -411,7 +424,7 @@ text-align: center; background-color: rgba(255,255,255, 0.7);">
         crtDiv = $(".current div");
         console.log("DIV: " + crtDiv.attr("id"));
         //Map 1 'flyto' animation location and function
-         if (crtDiv.attr("id") === "mymap2") {
+        if (crtDiv.attr("id") === "mymap2") {
             // Checks if the map container size changed and updates the map if so
             map2.invalidateSize();
             //Fly to a new location.
@@ -419,18 +432,18 @@ text-align: center; background-color: rgba(255,255,255, 0.7);">
                 animate: true,
                 duration: 4
             });
-        } else if (crtDiv.attr("id") === "potree"){
-             console.log("HERE");
-             if (!potree_loaded){
-                 load_sys();
-                 potree_loaded = true;
-             } else {
-                 var newUrl = window.location.href + "&doReload=1";
-                 console.log("Resetting location to " + newUrl);
-                 location.href = newUrl;
-                 location.reload(true);
-             }
-         }
+        } else if (crtDiv.attr("id") === "potree") {
+            console.log("HERE");
+            if (!potree_loaded) {
+                load_sys();
+                potree_loaded = true;
+            } else {
+                var newUrl = window.location.href + "&doReload=1";
+                console.log("Resetting location to " + newUrl);
+                location.href = newUrl;
+                location.reload(true);
+            }
+        }
 
     });
 </script>

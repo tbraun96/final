@@ -84,5 +84,5 @@ Developers acquired aerial video footage of the target forest stand with a [DJI 
 [Dr. Bo Zhao](https://ceoas.oregonstate.edu/profile/zhao/), GEOG 572 Geovisual Analytics Instructor, Oregon State University</br>
 [Cartography and Geovisualization Group,](https://geoviz.ceoas.oregonstate.edu/) Oregon State University </br>
 [Aerial Information Systems Lab,](http://ais.forestry.oregonstate.edu/) Oregon State University</br>
-[Management Algorithms and Remote Sensing Lab,](http://mars.forestry.oregonstate.edu/) Oregon State University</br>
+[Management, Algorithms, and Remote Sensing Lab,](http://mars.forestry.oregonstate.edu/) Oregon State University</br>
 [Oregon Lidar Consortium](https://www.oregongeology.org/lidar/)</br>

@@ -90,15 +90,18 @@ box-shadow: 10px 10px 41px 0px rgba(0,0,0,0.7);
 text-align: center;
 background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
             <h1>
-                <strong>Corvallis Forest Area</strong>
+                <strong> Web Visualizing a LiDAR Point Cloud in the McDonald-Dunn Forest</strong>
             </h1>
-
+            <div style="z-index: 999; text-align: center">
+            <h2>
+              <strong>Corvallis, Oregon, USA</strong>
+            </h2>
             <div style="z-index: 999; text-align: center">
                 <h4>
                     <strong>By Katharine Nicolato, Brian Begay, and Thomas Braun</strong>
                 </h4>
             </div>
-
+          </div>
         </div>
 
 
@@ -176,7 +179,7 @@ top: 2%; background-color: rgba(255,255,255, 0.7);" class="wrap aligncenter">
                 });
 
 
-                Potree.loadPointCloud("pointclouds/saddleback/cloud.js", "sigeom.sa", e => {
+                Potree.loadPointCloud("pointclouds/saddleback/cloud.js", "saddleback.sa", e => {
                     potreeViewer.scene.addPointCloud(e.pointcloud);
                     e.pointcloud.position.z = 170;
                     let material = e.pointcloud.material;

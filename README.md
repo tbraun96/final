@@ -51,7 +51,7 @@ This geovisualization serves both science communication and quantitative purpose
 </br>
 </br>
 #### Visualization </br>
-![](/img/final_vis.JPG)</br>
+![](/img/final_heightprofile.JPG)</br>
 
 ### Design Scheme
 

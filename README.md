@@ -68,15 +68,7 @@ Developers acquired aerial video footage of the target forest stand with a [DJI 
 
 ### Libraries
 
-[Cesium](https://cesiumjs.org/)[MeshLine](https://github.com/spite/THREE.MeshLine)</br>
-[d3]()                         [geotiff]()</br>
-[i18next]()                    [jquery-ui]</br>
-[jquery]()                     [jstree]()</br>
-[leaflet]()                    [openlayers3]()</br>
-[perfect-scrollbar]()          [plasio]()</br>
-[potree]()                     [proj4]()</br>
-[shapefile]()                  [spectrum]()</br>
-[three.js]()                   [tween]()</br>
+[Cesium](https://cesiumjs.org/), [MeshLine](https://github.com/spite/THREE.MeshLine), [D3](https://d3js.org/), [GeoTIFF](https://github.com/OSGeo/libgeotiffhttps://github.com/OSGeo/libgeotiff), [i18next](https://www.i18next.com/), [jQuery-ui](https://jqueryui.com/), [jQuery](https://jquery.com/), [jsTree](https://www.jstree.com/), [Leaflet](https://leafletjs.com/), [OpenLayers3](https://openlayers.org/), [Perfect-Scrollbar](https://github.com/mdbootstrap/perfect-scrollbar), [Plasio](https://github.com/verma/plasio), [Potree](http://potree.org/), [Proj4](https://github.com/OSGeo/PROJ), [Shapefile](https://github.com/calvinmetcalf/shapefile-js), [Spectrum](https://bgrins.github.io/spectrum/), [three.js](https://threejs.org/), [tween](https://github.com/tweenjs/tween.js/)
 
 ### Web Services
 [Potree Converter](https://github.com/potree/PotreeConverter) transforms the .las cloud file into a web-friendly format.</br>

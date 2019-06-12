@@ -1,13 +1,13 @@
-## Web Visualizing a LiDAR Point Cloud of a Stand in the McDonald-Dunn Forest
+## Web Visualizing a LiDAR Point Cloud of a McDonald-Dunn Forest Stand
 #### Bryan Begay, Thomas Braun, Katie Nicolato || Oregon State University Cartography and Geovisualization Group
 
 
-![](/img/wholestand.JPG)</br>
+![](/img/final_pic.JPG)</br>
 <img src="assets/carto2.png" width="250"><img src="assets/osu.png" width="225"><img src="assets/ais_logo.png" width="200"><img src="assets/MARS250.png" width="100"></br>
 
 ### About
 
-This geovisualization displays a coniferous forest stand in the McDonald-Dunn forest northwest of Corvallis, OR, USA. This stand is near the Lewisburg Saddle, a popular recreation area hosting hiking and mountain biking trails. The McDonald-Dunn is a research forest owned by Oregon State University.
+This geovisualization displays a coniferous forest stand in the McDonald-Dunn forest northwest of Corvallis, OR, USA. This stand is near the Lewisburg Saddle, a popular recreation area with hiking and mountain biking trails. The McDonald-Dunn is a research forest owned by Oregon State University.
 </br>
 
 We feature a 3D LiDAR point cloud (Light Detection and Ranging) overlaid onto a terrain map with a toolbar for manipulating the visualization. Several geovisualization tools communicate the stand features:

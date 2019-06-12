@@ -68,24 +68,15 @@ Developers acquired aerial video footage of the target forest stand with a [DJI 
 
 ### Libraries
 
-Cesium</br>
-MeshLine</br>
-d3</br>
-geotiff</br>
-i18next</br>
-jquery-ui</br>
-jquery</br>
-jstree</br>
-leaflet</br>
-openlayers3</br>
-perfect-scrollbar</br>
-plasio</br>
-potree</br>
-proj4</br>
-shapefile</br>
-spectrum</br>
-three.js</br>
-tween</br>
+[Cesium](https://cesiumjs.org/)[MeshLine](https://github.com/spite/THREE.MeshLine)</br>
+[d3]()                         [geotiff]()</br>
+[i18next]()                    [jquery-ui]</br>
+[jquery]()                     [jstree]()</br>
+[leaflet]()                    [openlayers3]()</br>
+[perfect-scrollbar]()          [plasio]()</br>
+[potree]()                     [proj4]()</br>
+[shapefile]()                  [spectrum]()</br>
+[three.js]()                   [tween]()</br>
 
 ### Web Services
 [Potree Converter](https://github.com/potree/PotreeConverter) transforms the .las cloud file into a web-friendly format.</br>
